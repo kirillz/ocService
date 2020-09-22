@@ -1,0 +1,29 @@
+<div class="container col-lg-8 col-md-8 my-5">
+    <div class="row">
+        <div class="col-lg-12 col-md-10 col-sm-8 mb-5">
+        <h4>Выберите категорию услуг</h4>
+        <ul>
+            {% for category in categories %}
+                <li style="list-style: none; padding: 0; font-size:22px;">
+                    <i style="color:red; margin-right: 10px;" class="{{ category.icon }}"></i><a href="/catalog/{{ category.slug }}">{{ category.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
+
+        <!--<div class="col-8">
+         <h4>Список услуг</h4>
+            <ul>
+            {% for item in items %}
+                  <li style="list-style: none;">
+                     <a href="/catalog/{{ item.category.slug }}/{{ item.slug }}">{{ item.name }}</a>
+                    </li>
+             {% endfor %}
+            </ul>
+    
+            {{ items.render|raw }}
+        </div> -->
+
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    
+    icon:
+        label: Иконка FA или Themify
+        span: left
+        type: text
+
+    name:
+        label: Название
+        span: auto
+    
+    slug:
+        label: Ссылка
+        span: auto
+        preset:
+            field: name
+            type: slug
+  
+    description:
+        label: Описание
+        type: textarea
+        span: full

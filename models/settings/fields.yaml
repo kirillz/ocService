@@ -1,0 +1,9 @@
+tabs:
+    fields:
+
+        plugin_help:
+            type   : partial
+            path   : $/icefox/service/models/settings/_plugin_help.htm
+            tab    : icefox.service::lang.settings.tabs.general
+
+

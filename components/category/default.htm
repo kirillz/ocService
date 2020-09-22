@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 col-sm-12 col-xs-12 col-md-8 mb-5">
+            <h2>{{ category.name }}</h2>
+            <p>{{ category.description }}</p>
+            <hr>
+
+            <ul style="padding: 0;">
+                {% for item in items %}
+                    <li id="cat-list">
+                        <a href="/catalog/{{ item.category.slug }}/{{ item.slug }}">{{ item.name }}</a> <span id="cat-price">{{ item.price }} р.</span>
+                    </li>
+                    <hr>
+                {% else %}
+                    <li style="list-style: none; padding: 0;">Услуг в этой категории в данный момент не оказываю.</li>
+                {% endfor %}
+            </ul>
+            {{ items.render|raw }}
+
+            <a href="/catalog/"><button class="btn btn-danger btn-sm my-3" style="font-size:18px; vertical-align: middle;"><i class="ti ti-back-right" style="font-size:20px; vertical-align: middle;"></i>Все услуги</button></a>
+        </div> 
+        <div class="col-lg-4 d-block d-sm-none d-md-block col-md-4 mt-5">
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>Подсказка</strong><br> Выберите услугу для получения подробной информации.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+    </div>
+</div>
+

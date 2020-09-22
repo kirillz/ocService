@@ -1,0 +1,12 @@
+import:
+    title: Импорт записей
+    modelClass: IceFox\Service\Models\ItemImport
+    list: $/icefox/service/models/itemimport/columns.yaml
+    redirect: icefox/service/items
+
+export:
+    title: Экспорт записей
+    modelClass: IceFox\Service\Models\ItemExport
+    list: $/icefox/service/models/itemexport/columns.yaml
+    redirect: icefox/service/items
+    useList: true

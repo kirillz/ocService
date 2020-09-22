@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/icefox/service/models/category/fields.yaml
+
+# Model Class name
+modelClass: IceFox\Service\Models\Category
+
+# Default redirect location
+defaultRedirect: icefox/service/categories
+
+# Create page
+create:
+    title: icefox.service::lang.controllers.categories.create_category
+    redirect: icefox/service/categories/update/:id
+    redirectClose: icefox/service/categories
+
+# Update page
+update:
+    title: icefox.service::lang.controllers.categories.edit_category
+    redirect: icefox/service/categories
+    redirectClose: icefox/service/categories
+
+# Preview page
+preview:
+    title: icefox.service::lang.controllers.categories.preview_category
